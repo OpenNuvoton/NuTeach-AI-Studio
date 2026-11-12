@@ -1,0 +1,5 @@
+mcu_toolkit/** -text
+scripts/vendor_patches/** -text
+tests/fixtures/mcu/** -text
+scripts/git-hooks/** text eol=lf
+*.bat text eol=crlf
