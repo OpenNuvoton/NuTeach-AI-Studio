@@ -104,6 +104,10 @@ Arm GNU toolchain (see *Getting started*).
    .venv\Scripts\python.exe scripts\download_arm_toolchain.py
    ```
 
+   The classroom package ships Arm's official 13.3.rel1 Windows installer instead; its exact file
+   name, SHA-256 and download link are recorded in
+   [`2_Compiler and Download Tool Driver/ARM_GNU_TOOLCHAIN_DOWNLOAD.txt`](2_Compiler%20and%20Download%20Tool%20Driver/ARM_GNU_TOOLCHAIN_DOWNLOAD.txt).
+
 Projects, samples and trained models live in `workspace/`. If the environment ever breaks, close
 the Studio, delete only `.venv` and run `01_INSTALL.bat` again — **never delete `workspace/`**.
 The repository starts with an empty `workspace/`; the classroom package handed to students also
@@ -218,7 +222,7 @@ NuTeach AI Studio 是一套不用寫程式、完全在本機 Windows 電腦執�
 2. 安裝 `0_Python_3.13.15\` 裡的 Python 3.13，記得勾選 *Add python.exe to PATH*。
 3. 雙擊 `01_INSTALL.bat`（第一次需要網路）。
 4. 雙擊 `02_START.bat`，瀏覽器會打開 `http://127.0.0.1:8765`。關掉所有 Studio 分頁後，黑色視窗約 8 秒會自己結束。
-5. 要上開發板時，再執行一次 `.venv\Scripts\python.exe scripts\download_arm_toolchain.py` 安裝 Arm GNU 編譯器。
+5. 要上開發板時，再執行一次 `.venv\Scripts\python.exe scripts\download_arm_toolchain.py` 安裝 Arm GNU 編譯器。教室用 ZIP 附的是 Arm 官方 13.3.rel1 安裝檔，檔名、SHA-256 與下載連結記在 [`ARM_GNU_TOOLCHAIN_DOWNLOAD.txt`](2_Compiler%20and%20Download%20Tool%20Driver/ARM_GNU_TOOLCHAIN_DOWNLOAD.txt)。
 
 所有專案、樣本與模型都在 `workspace\`。環境壞掉時只刪 `.venv`，再重跑 `01_INSTALL.bat`，**不要刪 `workspace\`**。
 

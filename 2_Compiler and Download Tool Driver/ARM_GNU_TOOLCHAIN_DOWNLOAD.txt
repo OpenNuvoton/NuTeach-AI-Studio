@@ -1,0 +1,30 @@
+Arm GNU Toolchain 13.3.rel1 - Windows 安裝檔（教室用 ZIP 附的版本）
+=====================================================================
+
+檔名     arm-gnu-toolchain-13.3.rel1-mingw-w64-i686-arm-none-eabi.exe
+大小     207,426,408 bytes
+SHA-256  cabeba12c1122a185aa7a6a56ad47ed5611e74359f73b7f0d13427d8a7437c99
+         （2026-11-12 與 Arm 官方公布的 .sha256asc 比對相同，是原封不動的官方檔案）
+
+官方下載
+  https://developer.arm.com/-/media/Files/downloads/gnu/13.3.rel1/binrel/arm-gnu-toolchain-13.3.rel1-mingw-w64-i686-arm-none-eabi.exe
+官方校驗碼
+  https://developer.arm.com/-/media/Files/downloads/gnu/13.3.rel1/binrel/arm-gnu-toolchain-13.3.rel1-mingw-w64-i686-arm-none-eabi.exe.sha256asc
+
+為什麼這個檔案不在 GitHub 上
+  - 檔案約 198 MB，超過 GitHub 單一檔案 100 MB 的上限（.gitignore 已排除）。
+  - 它是 Arm 發行的第三方軟體（含 GPL 授權的 GCC），下載與原始碼都由 Arm 官方網站提供。
+
+教室用的 ZIP 會把這個安裝檔放在本資料夾。從 GitHub 取得程式的人，請用上面的連結下載，
+再用 PowerShell 確認雜湊值和上面的 SHA-256 一樣：
+  Get-FileHash .\arm-gnu-toolchain-13.3.rel1-mingw-w64-i686-arm-none-eabi.exe -Algorithm SHA256
+
+另一個選擇：Studio 內建的下載腳本會自動下載並驗證 14.2.rel1（使用手冊 6.2 節）
+  .venv\Scripts\python.exe scripts\download_arm_toolchain.py
+13.3.rel1 和 14.2.rel1 都跑過開發板相關的自動測試。
+
+---------------------------------------------------------------------
+English: the classroom ZIP ships Arm's official 13.3.rel1 Windows installer in this folder.
+It is not in the Git repository because it exceeds GitHub's 100 MB file limit and is
+third-party (GPL) software distributed by Arm. Download it from the link above and check that
+its SHA-256 matches, or run scripts\download_arm_toolchain.py to install 14.2.rel1.
